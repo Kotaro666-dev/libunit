@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 20:34:21 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 09:57:45 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/09 16:00:52 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,5 @@ int strlen_launcher(void)
 	load_test(&testlist, "Basic test", &basic_test);
 	load_test(&testlist, "NULL test", &null_test);
 	load_test(&testlist, "Bigger string test", &bigger_str_test);
-
-	current = testlist;
-	while (current)
-	{
-		printf("Name: %s\n", current->name);
-		current = current->next;
-	}
-	return (0);
+	return (launch_tests(&testlist));
 }

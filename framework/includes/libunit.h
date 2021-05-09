@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:23:27 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 17:37:39 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/09 17:44:00 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,7 @@ void	clear_tests(t_unit_test **testlist);
 */
 
 void	append_report(t_unit_test **testlist);
+int		my_strlen(char *str);
+void	my_putendl_fd(char *s, int fd);
 
 #endif

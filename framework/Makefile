@@ -6,7 +6,7 @@
 #    By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/08 12:23:32 by kkamashi          #+#    #+#              #
-#    Updated: 2021/05/09 16:53:59 by kkamashi         ###   ########.fr        #
+#    Updated: 2021/05/09 17:34:15 by kkamashi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,8 @@ OBJS_DIR			= objs/
 SRCS				= launch_tests.c \
 					  load_test.c \
 					  display_results.c \
-					  create_test_result_report.c
+					  create_test_result_report.c \
+					  clear_tests.c
 
 ## Compiled Files ##
 OBJS				= $(SRCS:%.c=$(OBJS_DIR)%.o)

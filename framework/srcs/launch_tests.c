@@ -5,7 +5,7 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/08 12:23:35 by kkamashi          #+#    #+#             */
+/*   Created: 2021/05/08 12:23:35 by kkamashi          #+#    #+#             *
 /*   Updated: 2021/05/09 17:24:36 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -44,12 +44,12 @@ static void	parent_proc(t_unit_test *test, int *status)
 static int	run_tests(t_unit_test **testlist)
 {
 	int			status;
-	t_unit_test	*tmp;
+	t_unit_test	*current;
 	pid_t		pid;
 
 	status = 0;
-	tmp = *testlist;
-	while (*testlist)
+	current = *testlist;
+	while (current)
 	{
 		pid = fork();
 		if (pid < 0)
@@ -58,12 +58,11 @@ static int	run_tests(t_unit_test **testlist)
 			exit(-1);
 		}
 		else if (pid == 0)
-			child_proc(*testlist);
+			child_proc(current);
 		else
-			parent_proc(*testlist, &status);
-		*testlist = (*testlist)->next;
+			parent_proc(current, &status);
+		current = current->next;
 	}
-	*testlist = tmp;
 	return (status);
 }
 
@@ -74,6 +73,6 @@ int 		launch_tests(t_unit_test **testlist)
 	status = run_tests(testlist);
 	display_results(testlist);
 	append_report(testlist);
-//	clear_tests(testlist);
+	clear_tests(testlist);
 	return (status);
 }

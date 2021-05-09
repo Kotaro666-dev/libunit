@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   02_null_test.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/09 08:43:16 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 08:44:14 by kkamashi         ###   ########.fr       */
+/*   Created: 2021/05/08 20:36:12 by kkamashi          #+#    #+#             */
+/*   Updated: 2021/05/09 09:56:41 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "includes/tests.h"
+#include "../../../libft/includes/libft.h"
+#include "../../includes/tests.h"
 
-int main(void)
+int null_test(void)
 {
-	strlen_launcher();
-	return (0);
+	char *str;
+
+	str = NULL;
+	if (ft_strlen(str) == strlen(str))
+		return(0);
+	else
+		return(-1);
 }

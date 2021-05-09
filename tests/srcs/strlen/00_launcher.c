@@ -1,34 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/09 07:53:19 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 08:21:19 by kkamashi         ###   ########.fr       */
+/*   Created: 2021/05/08 20:34:21 by kkamashi          #+#    #+#             */
+/*   Updated: 2021/05/09 09:57:45 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "framework/includes/libunit.h"
+#include "../../../framework/includes/libunit.h"
+#include "../../includes/tests.h"
 
-static int basic_test()
-{
-	return (0);
-}
-
-static int null_test()
-{
-	return (0);
-}
-
-static int bigger_str_test()
-{
-	return (0);
-}
-
-int main(void)
+int strlen_launcher(void)
 {
 	t_unit_test *testlist;
 	t_unit_test *current;

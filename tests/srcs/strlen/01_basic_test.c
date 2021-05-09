@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_launcher.c                                      :+:      :+:    :+:   */
+/*   01_basic_test.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/08 12:56:49 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/08 12:58:58 by kkamashi         ###   ########.fr       */
+/*   Created: 2021/05/08 20:35:27 by kkamashi          #+#    #+#             */
+/*   Updated: 2021/05/09 09:49:01 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/tests.h"
+#include "../../../libft/includes/libft.h"
+#include "../../includes/tests.h"
 
-int launcher(void)
+int basic_test(void)
 {
-	return (0);
+	if (ft_strlen("Hello") == strlen("Hello"))
+		return(0);
+	else
+		return(-1);
 }

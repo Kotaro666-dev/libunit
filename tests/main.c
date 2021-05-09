@@ -6,17 +6,17 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 08:43:16 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 17:29:20 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/09 19:47:41 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "includes/tests.h"
 
-static void		print_header()
+static void		print_header_fd(int fd)
 {
-	printf("*********************************\n");
-	printf("** 42 - Unit Tests ****\n");
-	printf("*********************************\n");
+	my_putendl_fd("*********************************", fd);
+	my_putendl_fd("** 42 - Unit Tests ****", fd);
+	my_putendl_fd("*********************************", fd);
 }
 
 static void		create_report()
@@ -26,14 +26,12 @@ static void		create_report()
 	{
 		return ;
 	}
-	ft_putendl_fd("*********************************", g_fd);
-	ft_putendl_fd("** 42 - Unit Tests ****", g_fd);
-	ft_putendl_fd("*********************************", g_fd);
+	print_header_fd(g_fd);
 }
 
 int				main(void)
 {
-	print_header();
+	print_header_fd(STDOUT_FILENO);
 	create_report();
 	strlen_launcher();
 	close(g_fd);

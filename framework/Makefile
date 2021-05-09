@@ -6,7 +6,7 @@
 #    By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/08 12:23:32 by kkamashi          #+#    #+#              #
-#    Updated: 2021/05/09 07:51:17 by kkamashi         ###   ########.fr        #
+#    Updated: 2021/05/09 08:57:09 by kefujiwa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,15 +40,13 @@ RM					= rm -rf
 HEADER_DIR			= includes/
 SRCS_DIR			= srcs/
 OBJS_DIR			= objs/
-LIBFT_DIR			= ../libft/
 
 ## Files ##
 SRCS				= launch_tests.c \
-						load_test.c
+					  load_test.c
 
 ## Compiled Files ##
 OBJS				= $(SRCS:%.c=$(OBJS_DIR)%.o)
-LIBFT_NAME			= $(LIBFT_DIR)libft.a
 NAME				= libunit.a
 
 
@@ -60,12 +58,10 @@ NAME				= libunit.a
 all:				$(NAME)
 
 clean:
-					@$(MAKE) clean -C $(LIBFT_DIR)
 					@echo "$(_RED)Cleaning libunit objects...\n$(_RESET)"
 					@$(RM) $(OBJS_DIR)
 
 fclean:
-					@$(MAKE) fclean -C $(LIBFT_DIR)
 					@echo "$(_RED)Cleaning libunit objects...\n$(_RESET)"
 					@$(RM) $(OBJS_DIR)
 					@echo "$(_RED)Deleting library '$(NAME)'...\n$(_RESET)"
@@ -73,13 +69,9 @@ fclean:
 
 re:					fclean all
 
-$(NAME):			$(LIBFT_NAME) $(OBJS)
-					@cp $(LIBFT_NAME) $(NAME)
+$(NAME):			$(OBJS)
 					@$(AR) $(NAME) $(OBJS)
 					@echo "\n\n$(_GREEN)Library '$(NAME)' compiled.\n$(_RESET)"
-
-$(LIBFT_NAME):
-					@$(MAKE) -C $(LIBFT_DIR)
 
 $(OBJS):			$(OBJS_DIR)
 

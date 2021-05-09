@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/08 12:23:27 by kkamashi          #+#    #+#             *
-/*   Updated: 2021/05/09 17:24:47 by kkamashi         ###   ########.fr       */
+/*   Created: 2021/05/08 12:23:27 by kkamashi          #+#    #+#             */
+/*   Updated: 2021/05/09 17:37:39 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,13 @@
 # include <stdlib.h>
 # include <sys/wait.h>
 # include <signal.h>
-# include "fcntl.h"
 # include "constants.h"
+
+/*
+** BONUS_PART
+*/
+
+# include <fcntl.h>
 
 typedef struct	s_unit_test
 {

@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 16:48:29 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 17:47:00 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/09 17:53:08 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ void			append_report(t_unit_test **testlist)
 	current = *testlist;
 	while (current)
 	{
-		write(g_fd, "	> ", 3);
-		write(g_fd, current->name, my_strlen(current->name));
-		write(g_fd, " : ", 3);
+		my_putstr_fd("	> ", g_fd);
+		my_putstr_fd(current->name, g_fd);
+		my_putstr_fd(" : ", g_fd);
 		print_result(current->result);
 		current = current->next;
 	}

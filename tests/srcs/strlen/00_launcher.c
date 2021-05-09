@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 20:34:21 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 16:00:52 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/09 16:35:51 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int strlen_launcher(void)
 {
 	t_unit_test *testlist;
-	t_unit_test *current;
 
 	testlist = NULL;
 	printf("STRLEN:\n");

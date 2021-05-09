@@ -6,7 +6,7 @@
 #    By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/08 13:01:30 by kkamashi          #+#    #+#              #
-#    Updated: 2021/05/09 11:52:17 by kkamashi         ###   ########.fr        #
+#    Updated: 2021/05/09 17:13:06 by kkamashi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ OBJS				= $(SRCS:%.c=$(OBJS_DIR)%.o)
 LIBFT_NAME			= $(LIBFT_DIR)libft.a
 LIBUNIT_NAME		= $(LIBUNIT_DIR)libunit.a
 NAME				= tests
+REPORT_NAME			= report.txt
 
 
 # **************************************************************************** #
@@ -65,15 +66,19 @@ all:				$(NAME)
 
 clean:
 					@$(MAKE) clean -C $(LIBFT_DIR)
+					@$(MAKE) clean -C $(LIBUNIT_DIR)
 					@echo "$(_RED)Cleaning tests objects...\n$(_RESET)"
 					@$(RM) $(OBJS_DIR)
 
 fclean:
 					@$(MAKE) fclean -C $(LIBFT_DIR)
+					@$(MAKE) fclean -C $(LIBUNIT_DIR)
 					@echo "$(_RED)Cleaning tests objects...\n$(_RESET)"
 					@$(RM) $(OBJS_DIR)
 					@echo "$(_RED)Deleting library '$(NAME)'...\n$(_RESET)"
 					@$(RM) $(NAME)
+					@echo "$(_RED)Deleting '$(REPORT_NAME)'...\n$(_RESET)"
+					@$(RM) $(REPORT_NAME)
 
 re:					fclean all
 

@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:23:35 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 16:01:04 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/09 17:24:36 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ int 		launch_tests(t_unit_test **testlist)
 
 	status = run_tests(testlist);
 	display_results(testlist);
+	append_report(testlist);
 //	clear_tests(testlist);
 	return (status);
 }

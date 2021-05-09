@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 20:34:21 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 16:35:51 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/09 17:23:28 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int strlen_launcher(void)
 
 	testlist = NULL;
 	printf("STRLEN:\n");
+	ft_putendl_fd("STRLEN:", g_fd);
 	load_test(&testlist, "Basic test", &basic_test);
 	load_test(&testlist, "NULL test", &null_test);
 	load_test(&testlist, "Bigger string test", &bigger_str_test);

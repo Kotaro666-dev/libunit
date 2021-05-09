@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 20:34:21 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 19:09:13 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/09 21:18:05 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,8 @@ int strlen_launcher(void)
 	load_test(&testlist, "Basic test", &basic_test);
 	load_test(&testlist, "NULL test", &null_test);
 	load_test(&testlist, "Bigger string test", &bigger_str_test);
+	load_test(&testlist, "Bus error test", &buse_test);
+	load_test(&testlist, "FPE test", &fpe_test);
+	load_test(&testlist, "Abort test", &abort_test);
 	return (launch_tests(&testlist));
 }

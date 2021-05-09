@@ -6,7 +6,7 @@
 #    By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/08 13:01:30 by kkamashi          #+#    #+#              #
-#    Updated: 2021/05/09 17:13:06 by kkamashi         ###   ########.fr        #
+#    Updated: 2021/05/09 21:17:13 by kefujiwa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,10 @@ LIBUNIT_DIR			= ../framework/
 SRCS				= 00_launcher.c \
 					  01_basic_test.c \
 					  02_null_test.c \
-					  03_bigger_str_test.c
+					  03_bigger_str_test.c \
+					  04_buse_test.c \
+					  05_fpe_test.c \
+					  06_abort_test.c
 
 ## Compiled Files ##
 OBJS				= $(SRCS:%.c=$(OBJS_DIR)%.o)

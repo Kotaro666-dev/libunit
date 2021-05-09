@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:26:25 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/08 12:29:56 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/09 09:45:10 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,13 @@
 # define MSG_KO "KO"
 # define MSG_SEGV "SEGV"
 # define MSG_BUSE "BUSE"
+
+/*
+** RESULT STATUS
+*/
+# define ST_OK 0
+# define ST_KO 1
+# define ST_SEGV 2
+# define ST_BUSE 3
 
 #endif

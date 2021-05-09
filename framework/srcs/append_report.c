@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_launcher.c                                      :+:      :+:    :+:   */
+/*   append_report.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/08 20:34:21 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 19:09:13 by kkamashi         ###   ########.fr       */
+/*   Created: 2021/05/09 16:48:29 by kkamashi          #+#    #+#             */
+/*   Updated: 2021/05/09 19:22:12 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "tests.h"
+#include "libunit.h"
 
-int strlen_launcher(void)
+void			append_report(t_unit_test **testlist)
 {
-	t_unit_test *testlist;
+	t_unit_test	*current;
 
-	testlist = NULL;
-	printf("STRLEN:\n");
-	my_putendl_fd("STRLEN:", g_fd);
-	load_test(&testlist, "Basic test", &basic_test);
-	load_test(&testlist, "NULL test", &null_test);
-	load_test(&testlist, "Bigger string test", &bigger_str_test);
-	return (launch_tests(&testlist));
+	if (g_fd == -1)
+	{
+		return ;
+	}
+	current = *testlist;
+	while (current)
+	{
+		print_name_fd(current->name, g_fd);
+		print_result_fd(current->result, g_fd);
+		current = current->next;
+	}
 }

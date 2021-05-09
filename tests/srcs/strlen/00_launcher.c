@@ -6,12 +6,11 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 20:34:21 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 09:57:45 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/09 11:52:25 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../framework/includes/libunit.h"
-#include "../../includes/tests.h"
+#include "tests.h"
 
 int strlen_launcher(void)
 {

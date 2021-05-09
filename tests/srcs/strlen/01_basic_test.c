@@ -6,12 +6,11 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 20:35:27 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 09:49:01 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/09 11:53:01 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../libft/includes/libft.h"
-#include "../../includes/tests.h"
+#include "tests.h"
 
 int basic_test(void)
 {

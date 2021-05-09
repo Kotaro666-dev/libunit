@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:23:35 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 17:37:51 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/09 20:57:05 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,10 @@ static void	parent_proc(t_unit_test *test, int *status)
 			test->result = ST_SEGV;
 		else if (WTERMSIG(wstatus) == SIGBUS)
 			test->result = ST_BUSE;
+		else if (WTERMSIG(wstatus) == SIGABRT)
+			test->result = ST_ABORT;
+		else if (WTERMSIG(wstatus) == SIGFPE)
+			test->result = ST_FPE;
 	}
 	if (test->result != ST_OK)
 		*status = -1;

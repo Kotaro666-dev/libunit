@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 17:41:44 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 19:22:00 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/09 21:01:34 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,17 @@
 void	print_result_fd(int result, int fd)
 {
 	if (result == ST_OK)
-	{
 		my_putendl_fd(MSG_OK, fd);
-	}
 	else if (result == ST_KO)
-	{
 		my_putendl_fd(MSG_KO, fd);
-	}
 	else if (result == ST_SEGV)
-	{
 		my_putendl_fd(MSG_SEGV, fd);
-	}
 	else if (result == ST_BUSE)
-	{
 		my_putendl_fd(MSG_BUSE, fd);
-	}
+	else if (result == ST_ABORT)
+		my_putendl_fd(MSG_ABORT, fd);
+	else if (result == ST_FPE)
+		my_putendl_fd(MSG_FPE, fd);
 }
 
 void	print_name_fd(char *name, int fd)

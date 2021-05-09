@@ -6,12 +6,11 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 20:36:51 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 09:56:33 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/09 11:53:08 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../libft/includes/libft.h"
-#include "../../includes/tests.h"
+#include "tests.h"
 
 static char	*generate_bigger_str(void)
 {

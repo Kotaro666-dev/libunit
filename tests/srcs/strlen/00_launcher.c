@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../framework/includes/libunit.h"
-#include "../../includes/tests.h"
+#include "tests.h"
 
 int strlen_launcher(void)
 {

@@ -6,7 +6,7 @@
 #    By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/08 12:23:32 by kkamashi          #+#    #+#              #
-#    Updated: 2021/05/09 17:46:37 by kkamashi         ###   ########.fr        #
+#    Updated: 2021/05/10 08:30:58 by kkamashi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,8 @@ SRCS				= launch_tests.c \
 					  display_results.c \
 					  append_report.c \
 					  clear_tests.c \
-					  utilities.c
+					  my_libft.c \
+					  print_utilities.c
 
 ## Compiled Files ##
 OBJS				= $(SRCS:%.c=$(OBJS_DIR)%.o)

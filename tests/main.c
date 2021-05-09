@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/08 13:00:45 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/08 13:01:11 by kkamashi         ###   ########.fr       */
+/*   Created: 2021/05/09 08:43:16 by kkamashi          #+#    #+#             */
+/*   Updated: 2021/05/09 08:44:14 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 int main(void)
 {
+	strlen_launcher();
 	return (0);
 }

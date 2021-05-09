@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:26:25 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 20:55:00 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/10 08:05:06 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,18 @@
 */
 
 # define FILE_PATH "report.txt"
+
+/*
+** COLOR
+*/
+
+# define RESET   "\x1b[0m"
+# define BOLD    "\x1b[1m"
+# define RED     "\x1b[31m"
+# define GREEN   "\x1b[32m"
+# define YELLOW  "\x1b[33m"
+# define BLUE    "\x1b[34m"
+# define PURPLE  "\x1b[35m"
+# define CYAN    "\x1b[36m"
 
 #endif

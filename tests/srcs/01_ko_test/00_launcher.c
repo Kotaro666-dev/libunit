@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   02_null_test.c                                     :+:      :+:    :+:   */
+/*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/08 20:36:12 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 11:53:04 by kkamashi         ###   ########.fr       */
+/*   Created: 2021/05/11 08:07:05 by kefujiwa          #+#    #+#             */
+/*   Updated: 2021/05/11 08:07:52 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-int null_test(void)
+int ko_launcher(void)
 {
-	char *str;
+	t_unit_test *testlist;
 
-	str = NULL;
-	if (ft_strlen(str) == strlen(str))
-		return(0);
-	else
-		return(-1);
+	testlist = NULL;
+	printf("KO:\n");
+	my_putendl_fd("KO:", g_fd);
+	return (launch_tests(&testlist));
 }

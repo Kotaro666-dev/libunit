@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   05_fpe_test.c                                      :+:      :+:    :+:   */
+/*   01_null_test.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/09 18:04:01 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/09 18:19:47 by kefujiwa         ###   ########.fr       */
+/*   Created: 2021/05/08 20:36:12 by kkamashi          #+#    #+#             */
+/*   Updated: 2021/05/11 08:23:34 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-int fpe_test(void)
+int null_test(void)
 {
-	int	i;
+	char *str;
 
-	i = 0;
-	i = 100 / i;
-	if (ft_strlen("Hello") == strlen("Hello"))
+	str = NULL;
+	if (ft_strlen(str) == strlen(str))
 		return(0);
 	else
 		return(-1);

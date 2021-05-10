@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:23:27 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 19:22:31 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/10 08:36:39 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,7 @@ void	append_report(t_unit_test **testlist);
 int		my_strlen(char *str);
 void	my_putstr_fd(char *s, int fd);
 void	my_putendl_fd(char *s, int fd);
+void	my_putstr_color_fd(char *str, char *color, int fd);
+void	my_putendl_color_fd(char *str, char *color, int fd);
 
 #endif

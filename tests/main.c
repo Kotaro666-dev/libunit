@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 08:43:16 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/11 08:14:21 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/11 12:47:14 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int				main(void)
 	print_header_fd(STDOUT_FILENO);
 	create_report();
 	strlen_launcher();
+	ko_launcher();
 	segv_launcher();
 	buse_launcher();
 	abort_launcher();

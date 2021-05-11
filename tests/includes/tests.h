@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:57:12 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/11 08:04:53 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/11 12:22:34 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@
 int		strlen_launcher(void);
 int		basic_test(void);
 int		bigger_str_test(void);
+int		empty_string(void);
+int		one_character(void);
+int		many_spaces(void);
+int		only_null_character(void);
+int		string_with_null_character(void);
 
 /*
 ** KO_TEST

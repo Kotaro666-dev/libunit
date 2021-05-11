@@ -6,7 +6,7 @@
 #    By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/08 13:01:30 by kkamashi          #+#    #+#              #
-#    Updated: 2021/05/11 08:22:52 by kefujiwa         ###   ########.fr        #
+#    Updated: 2021/05/11 12:22:55 by kkamashi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,11 @@ LIBUNIT_DIR			= ../framework/
 OK					= 00_launcher.c \
 					  01_basic_test.c \
 					  02_bigger_str_test.c \
+					  03_empty_string.c \
+					  04_one_character.c \
+					  05_many_spaces.c \
+					  06_only_null_character.c \
+					  07_string_with_null_character.c \
 
 KO					= 00_launcher.c \
 

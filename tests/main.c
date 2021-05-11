@@ -6,11 +6,11 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 08:43:16 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 19:47:41 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/11 08:14:21 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "includes/tests.h"
+# include "tests.h"
 
 static void		print_header_fd(int fd)
 {
@@ -34,6 +34,10 @@ int				main(void)
 	print_header_fd(STDOUT_FILENO);
 	create_report();
 	strlen_launcher();
+	segv_launcher();
+	buse_launcher();
+	abort_launcher();
+	fpe_launcher();
 	close(g_fd);
 	return (0);
 }

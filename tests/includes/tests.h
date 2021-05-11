@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:57:12 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 21:17:30 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/11 08:04:53 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,51 @@
 # include "../../libft/includes/libft.h"
 
 /*
-** TEST WITH STRLEN
+** OK_TEST
 */
 
 int		strlen_launcher(void);
 int		basic_test(void);
-int		null_test(void);
 int		bigger_str_test(void);
+
+/*
+** KO_TEST
+*/
+
+int		ko_launcher(void);
+
+/*
+** SEGV_TEST
+*/
+
+int		segv_launcher(void);
+int		null_test(void);
+
+/*
+** BUSE_TEST
+*/
+
+int		buse_launcher(void);
 int		buse_test(void);
-int		fpe_test(void);
+
+/*
+** ABORT_TEST
+*/
+
+int		abort_launcher(void);
 int		abort_test(void);
+
+/*
+** FPE_TEST
+*/
+
+int		fpe_launcher(void);
+int		fpe_test(void);
+
+/*
+** ALARM_TEST
+*/
+
+int		alarm_launcher(void);
 
 #endif

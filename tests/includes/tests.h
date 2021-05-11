@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:57:12 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/11 12:22:34 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/11 13:36:10 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,10 @@ int		string_with_null_character(void);
 */
 
 int		ko_launcher(void);
+int		strlen_test(void);
+int		strncmp_test(void);
+int		strchr_test(void);
+int		strrchr_test(void);
 
 /*
 ** SEGV_TEST

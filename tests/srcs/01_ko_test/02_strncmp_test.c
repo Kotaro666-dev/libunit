@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_launcher.c                                      :+:      :+:    :+:   */
+/*   02_strncmp_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/11 08:07:05 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/11 13:52:43 by kkamashi         ###   ########.fr       */
+/*   Created: 2021/05/11 13:05:45 by kkamashi          #+#    #+#             */
+/*   Updated: 2021/05/11 13:21:28 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-int ko_launcher(void)
+int strncmp_test(void)
 {
-	t_unit_test *testlist;
+	char *str1 = "ABCDE";
+	char *str3 = "ABcDE";
+	char *str2 = "ABCDE";
 
-	testlist = NULL;
-	my_putendl_fd("KO_TEST:", STDOUT_FILENO);
-	my_putendl_fd("KO_TEST:", g_fd);
-	load_test(&testlist, "STRLEN test", &strlen_test);
-	load_test(&testlist, "STRNCMP test", &strncmp_test);
-	load_test(&testlist, "STRCHR test", &strchr_test);
-	load_test(&testlist, "STRRCHR test", &strrchr_test);
-	return (launch_tests(&testlist));
+
+	if (ft_strncmp(str1, str2, 4) == strncmp(str1, str3, 4))
+		return(0);
+	else
+		return(-1);
 }

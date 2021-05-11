@@ -6,7 +6,7 @@
 #    By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/08 13:01:30 by kkamashi          #+#    #+#              #
-#    Updated: 2021/05/11 12:22:55 by kkamashi         ###   ########.fr        #
+#    Updated: 2021/05/11 13:36:00 by kkamashi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,10 @@ OK					= 00_launcher.c \
 					  07_string_with_null_character.c \
 
 KO					= 00_launcher.c \
+					  01_strlen_test.c \
+					  02_strncmp_test.c \
+					  03_strchr_test.c \
+					  04_strrchr_test.c \
 
 SEGV				= 00_launcher.c \
 					  01_null_test.c \

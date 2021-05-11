@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_launcher.c                                      :+:      :+:    :+:   */
+/*   01_strlen_test.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/11 08:07:05 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/11 13:52:43 by kkamashi         ###   ########.fr       */
+/*   Created: 2021/05/11 12:43:48 by kkamashi          #+#    #+#             */
+/*   Updated: 2021/05/11 12:59:52 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-int ko_launcher(void)
+int strlen_test(void)
 {
-	t_unit_test *testlist;
+	char *str1 = "Hello World\0!";
+	char *str2 = "Hello World!";
 
-	testlist = NULL;
-	my_putendl_fd("KO_TEST:", STDOUT_FILENO);
-	my_putendl_fd("KO_TEST:", g_fd);
-	load_test(&testlist, "STRLEN test", &strlen_test);
-	load_test(&testlist, "STRNCMP test", &strncmp_test);
-	load_test(&testlist, "STRCHR test", &strchr_test);
-	load_test(&testlist, "STRRCHR test", &strrchr_test);
-	return (launch_tests(&testlist));
+	if (ft_strlen(str1) == strlen(str2))
+		return(0);
+	else
+		return(-1);
 }

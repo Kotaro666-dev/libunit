@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_launcher.c                                      :+:      :+:    :+:   */
+/*   03_strchr_test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/11 08:07:05 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/11 13:52:43 by kkamashi         ###   ########.fr       */
+/*   Created: 2021/05/11 13:10:01 by kkamashi          #+#    #+#             */
+/*   Updated: 2021/05/11 13:25:17 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-int ko_launcher(void)
+int strchr_test(void)
 {
-	t_unit_test *testlist;
+	char *str1 = "ABC\0DEF";
+	char *str2 = "ABCDEF";
 
-	testlist = NULL;
-	my_putendl_fd("KO_TEST:", STDOUT_FILENO);
-	my_putendl_fd("KO_TEST:", g_fd);
-	load_test(&testlist, "STRLEN test", &strlen_test);
-	load_test(&testlist, "STRNCMP test", &strncmp_test);
-	load_test(&testlist, "STRCHR test", &strchr_test);
-	load_test(&testlist, "STRRCHR test", &strrchr_test);
-	return (launch_tests(&testlist));
+	if (ft_strchr(str1, 'D') == strchr(str2, 'D'))
+		return(0);
+	else
+		return(-1);
 }

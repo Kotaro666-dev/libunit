@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 08:21:56 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/10 08:24:12 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/12 14:55:49 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ void	print_result_fd(int result, int fd)
 		my_putendl_color_fd(MSG_ABORT, YELLOW, fd);
 	else if (result == ST_FPE)
 		my_putendl_color_fd(MSG_FPE, YELLOW, fd);
+	else if (result == ST_ALARM)
+		my_putendl_color_fd(MSG_ALARM, YELLOW, fd);
 }
 
 void	print_name_fd(char *name, int fd)

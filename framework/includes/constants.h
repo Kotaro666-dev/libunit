@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:26:25 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/10 08:05:06 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/12 14:55:08 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # define MSG_BUSE "[BUSE]"
 # define MSG_ABORT "[ABORT]"
 # define MSG_FPE "[FPE]"
+# define MSG_ALARM "[TIMEOUT]"
 
 /*
 ** RESULT STATUS
@@ -34,12 +35,14 @@
 # define ST_BUSE 3
 # define ST_ABORT 4
 # define ST_FPE 5
+# define ST_ALARM 6
 
 /*
 ** BONUS PART
 */
 
 # define FILE_PATH "report.txt"
+# define TIMEOUT 5
 
 /*
 ** COLOR

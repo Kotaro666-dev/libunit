@@ -6,7 +6,7 @@
 #    By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/08 13:01:30 by kkamashi          #+#    #+#              #
-#    Updated: 2021/05/11 13:36:00 by kkamashi         ###   ########.fr        #
+#    Updated: 2021/05/12 15:13:50 by kefujiwa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,7 +78,9 @@ ABORT				= 00_launcher.c \
 FPE					= 00_launcher.c \
 					  01_fpe_test.c \
 
-ALARM_DIR			= 00_launcher.c \
+ALARM				= 00_launcher.c \
+					  01_in_time_test.c \
+					  02_timeout_test.c
 
 SRCS				= $(addprefix $(OK_DIR), $(OK)) \
 					  $(addprefix $(KO_DIR), $(KO)) \

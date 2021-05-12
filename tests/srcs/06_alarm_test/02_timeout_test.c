@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_launcher.c                                      :+:      :+:    :+:   */
+/*   02_timeout_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/11 08:10:34 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/12 15:12:33 by kefujiwa         ###   ########.fr       */
+/*   Created: 2021/05/12 15:07:49 by kefujiwa          #+#    #+#             */
+/*   Updated: 2021/05/12 15:27:01 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-int alarm_launcher(void)
+int timeout_test(void)
 {
-	t_unit_test *testlist;
-
-	testlist = NULL;
-	printf("ALARM:\n");
-	my_putendl_fd("ALARM:", g_fd);
-	load_test(&testlist, "IN TIME test", &in_time_test);
-	load_test(&testlist, "TIMEOUT test", &timeout_test);
-	return (launch_tests(&testlist));
+	sleep(10);
+	if (ft_strlen("Hello") == strlen("Hello"))
+		return(0);
+	else
+		return(-1);
 }

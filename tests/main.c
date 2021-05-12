@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 08:43:16 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/11 13:35:47 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/12 15:13:13 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int				main(void)
 	buse_launcher();
 	abort_launcher();
 	fpe_launcher();
+	alarm_launcher();
 	close(g_fd);
 	return (0);
 }

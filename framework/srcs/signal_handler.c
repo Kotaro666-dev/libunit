@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_launcher.c                                      :+:      :+:    :+:   */
+/*   signal_handler.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/11 08:10:34 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/12 15:12:33 by kefujiwa         ###   ########.fr       */
+/*   Created: 2021/05/12 14:56:59 by kefujiwa          #+#    #+#             */
+/*   Updated: 2021/05/12 15:01:17 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "tests.h"
+#include "libunit.h"
 
-int alarm_launcher(void)
+void	signal_handler(int sig)
 {
-	t_unit_test *testlist;
-
-	testlist = NULL;
-	printf("ALARM:\n");
-	my_putendl_fd("ALARM:", g_fd);
-	load_test(&testlist, "IN TIME test", &in_time_test);
-	load_test(&testlist, "TIMEOUT test", &timeout_test);
-	return (launch_tests(&testlist));
+	if (sig == SIGALRM)
+		exit(SIGALRM);
 }

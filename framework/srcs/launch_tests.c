@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:23:35 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 20:57:05 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/12 14:54:20 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 static void	child_proc(t_unit_test *test)
 {
+	signal(SIGALRM, signal_handler);
+	alarm(TIMEOUT);
 	exit(test->func());
 }
 
@@ -27,6 +29,8 @@ static void	parent_proc(t_unit_test *test, int *status)
 	{
 		if (WEXITSTATUS(wstatus) == 0)
 			test->result = ST_OK;
+		else if (WEXITSTATUS(wstatus) == SIGALRM)
+			test->result = ST_ALARM;
 		else
 			test->result = ST_KO;
 	}

@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:23:27 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/10 08:36:39 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/12 15:00:22 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,6 @@ void	my_putstr_fd(char *s, int fd);
 void	my_putendl_fd(char *s, int fd);
 void	my_putstr_color_fd(char *str, char *color, int fd);
 void	my_putendl_color_fd(char *str, char *color, int fd);
+void	signal_handler(int sig);
 
 #endif

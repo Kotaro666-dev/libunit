@@ -6,7 +6,7 @@
 #    By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/08 16:17:29 by kkamashi          #+#    #+#              #
-#    Updated: 2021/05/12 16:20:39 by kefujiwa         ###   ########.fr        #
+#    Updated: 2021/05/12 17:38:17 by kefujiwa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,26 @@ LIBUNIT_DIR			= ../framework/
 
 ## Files ##
 ATOI				= 00_launcher.c \
-					  01_zero_test.c \
+					  01_zero.c \
+					  02_nan_in_the_middle.c \
+					  03_negative_number.c \
+					  04_positive_number.c \
+					  05_prefix_single_zero.c \
+					  06_prefix_multi_zero.c \
+					  07_plus_minus.c \
+					  08_minus_plus.c \
+					  09_double_minus.c \
+					  10_double_plus.c \
+					  11_plus_in_the_middle.c \
+					  12_minus_in_the_middle.c \
+					  13_is_space.c \
+					  14_maximum.c \
+					  15_minimum.c \
+					  16_nan_after_space.c \
+					  17_backspace.c \
+					  18_empty_string.c \
+					  19_solo_minus.c \
+					  20_solo_plus.c
 
 SRCS				= $(addprefix $(ATOI_DIR), $(ATOI)) \
 
@@ -68,13 +87,13 @@ all:				$(NAME)
 clean:
 					@$(MAKE) clean -C $(LIBFT_DIR)
 					@$(MAKE) clean -C $(LIBUNIT_DIR)
-					@echo "$(_RED)Cleaning tests objects...\n$(_RESET)"
+					@echo "$(_RED)Cleaning real_tests objects...\n$(_RESET)"
 					@$(RM) $(OBJS_DIR)
 
 fclean:
 					@$(MAKE) fclean -C $(LIBFT_DIR)
 					@$(MAKE) fclean -C $(LIBUNIT_DIR)
-					@echo "$(_RED)Cleaning tests objects...\n$(_RESET)"
+					@echo "$(_RED)Cleaning real_tests objects...\n$(_RESET)"
 					@$(RM) $(OBJS_DIR)
 					@echo "$(_RED)Deleting library '$(NAME)'...\n$(_RESET)"
 					@$(RM) $(NAME)

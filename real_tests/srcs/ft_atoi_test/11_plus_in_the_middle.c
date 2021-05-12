@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   01_zero_test.c                                     :+:      :+:    :+:   */
+/*   11_plus_in_the_middle.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 16:18:00 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/12 16:19:04 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/12 17:10:26 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "real_tests.h"
 
-int	zero_test(void)
+int	plus_in_the_middle_test(void)
 {
-	if (ft_atoi("0") == atoi("0"))
+	if (ft_atoi("+87+11") == atoi("+87+11"))
 		return (0);
 	else
 		return (-1);

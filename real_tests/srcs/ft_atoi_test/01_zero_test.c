@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   real_tests.h                                       :+:      :+:    :+:   */
+/*   01_zero_test.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/08 16:16:44 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/12 16:23:09 by kefujiwa         ###   ########.fr       */
+/*   Created: 2021/05/12 16:18:00 by kefujiwa          #+#    #+#             */
+/*   Updated: 2021/05/12 16:19:04 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef REAL_TESTS_H
-# define REAL_TESTS_H
+#include "real_tests.h"
 
-# include <unistd.h>
-# include <stdio.h>
-# include <string.h>
-# include "libunit.h"
-# include "libft.h"
-
-/*
-** FT_ATOI_TEST
-*/
-
-int		ft_atoi_launcher(void);
-int		zero_test(void);
-
-#endif
+int	zero_test(void)
+{
+	if (ft_atoi("0") == atoi("0"))
+		return (0);
+	else
+		return (-1);
+}

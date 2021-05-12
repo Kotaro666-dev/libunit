@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:57:12 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/11 13:36:10 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/12 15:08:48 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,7 @@ int		fpe_test(void);
 */
 
 int		alarm_launcher(void);
+int		in_time_test(void);
+int		timeout_test(void);
 
 #endif

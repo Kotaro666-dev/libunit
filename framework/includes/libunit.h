@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:23:27 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/12 15:00:22 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/13 23:26:51 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <sys/wait.h>
 # include <signal.h>
+# include <errno.h>
 # include "constants.h"
 
 /*
@@ -53,10 +54,13 @@ void	print_result_fd(int result, int fd);
 
 void	append_report(t_unit_test **testlist);
 int		my_strlen(char *str);
+size_t	my_strlcpy(char *dst, const char *src, size_t dstsize);
 void	my_putstr_fd(char *s, int fd);
 void	my_putendl_fd(char *s, int fd);
 void	my_putstr_color_fd(char *str, char *color, int fd);
 void	my_putendl_color_fd(char *str, char *color, int fd);
+void	*my_calloc(size_t count, size_t size);
 void	signal_handler(int sig);
+void	exit_perror(char *str_msg, int exit_status);
 
 #endif

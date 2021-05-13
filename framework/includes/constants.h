@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:26:25 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/12 14:55:08 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/13 23:18:48 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,17 @@
 # define BLUE    "\x1b[34m"
 # define PURPLE  "\x1b[35m"
 # define CYAN    "\x1b[36m"
+
+/*
+** RETURN VALUE
+*/
+# define SUCCESS 0
+# define FAILURE -1
+
+/*
+** ERRNO
+*/
+# define E_NONAME 200
+# define E_NOFUNC 201
 
 #endif

@@ -6,12 +6,26 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:23:35 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/12 14:54:20 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/13 23:17:54 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 #include "constants.h"
+
+static void	validate_member(t_unit_test *test)
+{
+	if (!test->name)
+	{
+		errno = E_NONAME;
+		exit_perror("launch_tests", FAILURE);
+	}
+	if (!test->func)
+	{
+		errno = E_NOFUNC;
+		exit_perror(test->name, FAILURE);
+	}
+}
 
 static void	child_proc(t_unit_test *test)
 {
@@ -59,12 +73,10 @@ static int	run_tests(t_unit_test **testlist)
 	current = *testlist;
 	while (current)
 	{
+		validate_member(current);
 		pid = fork();
 		if (pid < 0)
-		{
-			perror("launch_tests");
-			exit(-1);
-		}
+			exit_perror("launch_tests", FAILURE);
 		else if (pid == 0)
 			child_proc(current);
 		else

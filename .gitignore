@@ -34,3 +34,5 @@
 .vscode
 tests/tests
 tests/report.txt
+real_tests/real_tests
+real_tests/report.txt

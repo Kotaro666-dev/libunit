@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_launcher.c                                      :+:      :+:    :+:   */
+/*   11_plus_in_the_middle.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/08 16:42:26 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/08 16:42:37 by kkamashi         ###   ########.fr       */
+/*   Created: 2021/05/12 16:18:00 by kefujiwa          #+#    #+#             */
+/*   Updated: 2021/05/12 17:10:26 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/real_tests.h"
+#include "real_tests.h"
 
-int launcher(void)
+int	plus_in_the_middle_test(void)
 {
-	return (0);
+	if (ft_atoi("+87+11") == atoi("+87+11"))
+		return (0);
+	else
+		return (-1);
 }

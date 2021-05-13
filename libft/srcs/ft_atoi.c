@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 16:42:20 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/04/09 10:48:34 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/13 19:52:55 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,40 +20,42 @@ static int	is_space(char c)
 		|| c == '\v' || c == '\f' || c == '\r');
 }
 
-static int	is_result_overflow(long long int num)
+static int	calc_atoi(const char *str, int sign)
 {
-	if (num > INT_MAX)
+	unsigned long	num;
+	unsigned long	max;
+	int				digit;
+
+	num = 0;
+	max = LLONG_MAX;
+	digit = (sign == 1 ? 7 : 8);
+	while (ft_isdigit(*str))
 	{
-		return (1);
+		if (num < max / 10 || (num == max / 10 && *str - '0' <= digit))
+			num = num * 10 + (*str - '0');
+		else
+		{
+			if (sign == 1)
+				return (-1);
+			else
+				return (0);
+		}
+		str++;
 	}
-	return (0);
+	return ((int)num * sign);
 }
 
-int	ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
-	long long int	result;
-	int				is_minus;
+	int	sign;
 
-	if (str == NULL)
-		return (0);
-	result = 0;
-	is_minus = 1;
+	sign = 1;
 	while (is_space(*str))
 		str++;
 	if (*str == '+' || *str == '-')
 	{
-		if (*str == '-')
-			is_minus = -1;
+		sign = (*str == '+' ? 1 : -1);
 		str++;
 	}
-	while (ft_isdigit(*str))
-	{
-		result = result * 10 + (*str - '0');
-		str++;
-	}
-	if (is_result_overflow(result))
-	{
-		return (-1);
-	}
-	return ((int)(result * is_minus));
+	return (calc_atoi(str, sign));
 }

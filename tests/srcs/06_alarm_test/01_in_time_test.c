@@ -6,17 +6,17 @@
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 15:03:38 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/12 15:14:28 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 15:34:41 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-int in_time_test(void)
+int	in_time_test(void)
 {
 	sleep(1);
 	if (ft_strlen("Hello") == strlen("Hello"))
-		return(0);
+		return (0);
 	else
-		return(-1);
+		return (-1);
 }

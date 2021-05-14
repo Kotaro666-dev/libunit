@@ -6,15 +6,15 @@
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 08:09:15 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/14 13:46:25 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 15:33:27 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-int abort_launcher(void)
+int	abort_launcher(void)
 {
-	t_unit_test *testlist;
+	t_unit_test	*testlist;
 
 	testlist = NULL;
 	printf("ABORT:\n");

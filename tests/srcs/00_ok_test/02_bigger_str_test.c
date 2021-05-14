@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 20:36:51 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/11 08:23:19 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 14:56:25 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ static char	*generate_bigger_str(void)
 	return (str);
 }
 
-int			bigger_str_test(void)
+int	bigger_str_test(void)
 {
-	char *str;
+	char	*str;
 
 	str = generate_bigger_str();
 	if (!str)
@@ -42,7 +42,7 @@ int			bigger_str_test(void)
 		return (-1);
 	}
 	if (ft_strlen(str) == strlen(str))
-		return(0);
+		return (0);
 	else
-		return(-1);
+		return (-1);
 }

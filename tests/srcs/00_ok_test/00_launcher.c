@@ -6,15 +6,15 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 20:34:21 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/11 12:23:21 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/14 14:53:58 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-int strlen_launcher(void)
+int	strlen_launcher(void)
 {
-	t_unit_test *testlist;
+	t_unit_test	*testlist;
 
 	testlist = NULL;
 	my_putendl_fd("OK_TEST:", STDOUT_FILENO);
@@ -26,6 +26,6 @@ int strlen_launcher(void)
 	load_test(&testlist, "Many spaces test", &many_spaces);
 	load_test(&testlist, "Only null character test", &many_spaces);
 	load_test(&testlist, "String with null character test",
-											 &string_with_null_character);
+		&string_with_null_character);
 	return (launch_tests(&testlist));
 }

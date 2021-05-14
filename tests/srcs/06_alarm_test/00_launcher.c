@@ -6,15 +6,15 @@
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 08:10:34 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/14 13:54:14 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 15:34:20 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-int alarm_launcher(void)
+int	alarm_launcher(void)
 {
-	t_unit_test *testlist;
+	t_unit_test	*testlist;
 
 	testlist = NULL;
 	printf("ALARM:\n");

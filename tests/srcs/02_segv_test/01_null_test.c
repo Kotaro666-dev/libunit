@@ -6,19 +6,19 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 20:36:12 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/11 08:23:34 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 15:03:05 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-int null_test(void)
+int	null_test(void)
 {
-	char *str;
+	char	*str;
 
 	str = NULL;
 	if (ft_strlen(str) == strlen(str))
-		return(0);
+		return (0);
 	else
-		return(-1);
+		return (-1);
 }

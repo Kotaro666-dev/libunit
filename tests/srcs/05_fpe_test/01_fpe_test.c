@@ -6,20 +6,20 @@
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 18:04:01 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/11 08:23:58 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 15:34:05 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-int fpe_test(void)
+int	fpe_test(void)
 {
 	int	i;
 
 	i = 0;
 	i = 100 / i;
 	if (ft_strlen("Hello") == strlen("Hello"))
-		return(0);
+		return (0);
 	else
-		return(-1);
+		return (-1);
 }

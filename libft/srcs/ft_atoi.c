@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 16:42:20 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/13 19:52:55 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/14 16:21:36 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ static int	calc_atoi(const char *str, int sign)
 
 	num = 0;
 	max = LLONG_MAX;
-	digit = (sign == 1 ? 7 : 8);
+	if (sign == 1)
+		digit = 7;
+	else
+		digit = 8;
 	while (ft_isdigit(*str))
 	{
 		if (num < max / 10 || (num == max / 10 && *str - '0' <= digit))
@@ -45,16 +48,18 @@ static int	calc_atoi(const char *str, int sign)
 	return ((int)num * sign);
 }
 
-int			ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int	sign;
 
 	sign = 1;
 	while (is_space(*str))
 		str++;
-	if (*str == '+' || *str == '-')
+	if (*str == '+')
+		str++;
+	else if (*str == '-')
 	{
-		sign = (*str == '+' ? 1 : -1);
+		sign = -1;
 		str++;
 	}
 	return (calc_atoi(str, sign));

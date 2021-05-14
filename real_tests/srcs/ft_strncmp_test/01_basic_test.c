@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 13:21:38 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/14 14:58:11 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/14 16:46:51 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	basic_test(void)
 {
-	if (ft_strncmp("Hello World", "Hello World", 11) ==
-		strncmp("Hello World", "Hello World", 11))
+	if (ft_strncmp("Hello World", "Hello World", 11)
+		== strncmp("Hello World", "Hello World", 11))
 		return (0);
 	else
 		return (-1);

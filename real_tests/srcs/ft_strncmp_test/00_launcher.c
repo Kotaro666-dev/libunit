@@ -6,15 +6,15 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 13:18:02 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/14 14:57:38 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/14 16:45:53 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "real_tests.h"
 
-int ft_strncmp_launcher(void)
+int	ft_strncmp_launcher(void)
 {
-	t_unit_test *testlist;
+	t_unit_test	*testlist;
 
 	testlist = NULL;
 	my_putendl_fd("FT_STRNCMP_TEST:", STDOUT_FILENO);

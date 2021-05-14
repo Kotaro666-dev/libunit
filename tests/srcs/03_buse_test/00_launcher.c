@@ -6,7 +6,7 @@
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 08:11:35 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/14 13:45:43 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 14:04:21 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,6 @@ int buse_launcher(void)
 	printf("BUSE:\n");
 	my_putendl_fd("BUSE:", g_fd);
 	load_test(&testlist, "Bus error test", &buse_test);
-	run_tests(&testlist);
-	display_results(&testlist);
-	append_report(&testlist);
 	run_tests(&testlist);
 	display_results(&testlist);
 	append_report(&testlist);

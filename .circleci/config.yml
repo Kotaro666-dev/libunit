@@ -1,6 +1,15 @@
 version: 2.1
 jobs:
-  build:
+  norminette:
+    docker:
+      - image: alexandregv/norminette:v3
+    working_directory: ~/project/
+      - checkout
+      - run: norminette -R CheckForbiddenSourceHeader framework
+      - run: norminette -R CheckForbiddenSourceHeader libft
+      - run: norminette -R CheckForbiddenSourceHeader real_tests
+      - run: norminette -R CheckForbiddenSourceHeader tests
+  test:
     docker:
       - image: gcc:4.9
     working_directory: ~/project/

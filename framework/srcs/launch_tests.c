@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:23:35 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/14 13:35:48 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 14:44:17 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int	run_tests(t_unit_test **testlist)
 
 int	launch_tests(t_unit_test **testlist)
 {
-	int status;
+	int	status;
 
 	status = run_tests(testlist);
 	display_results(testlist);

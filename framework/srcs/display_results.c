@@ -6,13 +6,13 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 12:04:19 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 19:21:57 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/14 14:41:46 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 
-void			display_results(t_unit_test **testlist)
+void	display_results(t_unit_test **testlist)
 {
 	t_unit_test	*current;
 	int			total;

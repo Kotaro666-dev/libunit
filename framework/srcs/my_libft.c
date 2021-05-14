@@ -6,15 +6,15 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 17:41:44 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/13 23:26:35 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 14:47:25 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libunit.h"
+#include "libunit.h"
 
-int		my_strlen(char *str)
+int	my_strlen(char *str)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	while (str[len])
@@ -48,7 +48,7 @@ size_t	my_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	char	*p_src;
 
-	p_src = (char*)src;
+	p_src = (char *)src;
 	if (dstsize != 0)
 	{
 		while (dstsize - 1 && *src)
@@ -74,7 +74,7 @@ void	*my_calloc(size_t count, size_t size)
 		return (NULL);
 	while (nbytes--)
 	{
-		*(char*)p = 0;
+		*(char *)p = 0;
 		p++;
 	}
 	return (p);

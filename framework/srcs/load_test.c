@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 07:48:29 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 08:28:13 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/14 14:46:45 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static t_unit_test	*create_new_node(char *name, int(*func)(void))
 {
-	t_unit_test *new;
+	t_unit_test	*new;
 
 	new = (t_unit_test *)malloc(sizeof(t_unit_test));
 	if (!new)
@@ -27,9 +27,9 @@ static t_unit_test	*create_new_node(char *name, int(*func)(void))
 	return (new);
 }
 
-void 				load_test(t_unit_test **list, char *name, int(*func)(void))
+void 	load_test(t_unit_test **list, char *name, int(*func)(void))
 {
-	t_unit_test *current;
+	t_unit_test	*current;
 
 	if (*list == NULL)
 	{

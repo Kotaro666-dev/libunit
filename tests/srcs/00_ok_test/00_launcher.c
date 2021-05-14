@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 20:34:21 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/14 15:51:12 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 22:44:18 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	strlen_launcher(void)
 	t_unit_test	*testlist;
 
 	testlist = NULL;
-	my_putendl_fd("OK_TEST:", STDOUT_FILENO);
-	my_putendl_fd("OK_TEST:", g_fd);
+	print_test_fd("OK Tests", STDOUT_FILENO);
+	print_test_fd("OK Tests", g_fd);
 	load_test(&testlist, "Basic test", &basic_test);
 	load_test(&testlist, "Bigger string test", &bigger_str_test);
 	load_test(&testlist, "Empty string test", &empty_string);

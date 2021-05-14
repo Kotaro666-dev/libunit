@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:26:25 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/13 23:18:48 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 23:27:57 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 # define MSG_BUSE "[BUSE]"
 # define MSG_ABORT "[ABORT]"
 # define MSG_FPE "[FPE]"
-# define MSG_ALARM "[TIMEOUT]"
+# define MSG_ALARM "[TMOUT]"
 
 /*
 ** RESULT STATUS
@@ -45,11 +45,14 @@
 # define TIMEOUT 5
 
 /*
-** COLOR
+** ESCAPE SEQUENCE
 */
 
+# define ESC     "\x1b"
+# define CLEAR   "\x1b[2J"
 # define RESET   "\x1b[0m"
 # define BOLD    "\x1b[1m"
+# define UNDER   "\x1b[4m"
 # define RED     "\x1b[31m"
 # define GREEN   "\x1b[32m"
 # define YELLOW  "\x1b[33m"

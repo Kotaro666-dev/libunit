@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 13:18:02 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/14 16:45:53 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 23:39:17 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	ft_strncmp_launcher(void)
 	t_unit_test	*testlist;
 
 	testlist = NULL;
-	my_putendl_fd("FT_STRNCMP_TEST:", STDOUT_FILENO);
-	my_putendl_fd("FT_STRNCMP_TEST:", g_fd);
+	print_test_fd("FT_STRNCMP Tests", STDOUT_FILENO);
+	print_test_fd("FT_STRNCMP Tests", g_fd);
 	load_test(&testlist, "ft_strncmp(\"Hello World\", \"Hello World\", 11)", \
 									&basic_test);
 	load_test(&testlist, "ft_strncmp(\"\", \"\", 10)", &nan_charactors);

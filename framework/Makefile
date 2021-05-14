@@ -6,7 +6,7 @@
 #    By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/08 12:23:32 by kkamashi          #+#    #+#              #
-#    Updated: 2021/05/14 13:34:13 by kefujiwa         ###   ########.fr        #
+#    Updated: 2021/05/14 23:11:30 by kefujiwa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,7 @@ SRCS				= launch_tests.c \
 					  append_report.c \
 					  clear_tests.c \
 					  my_libft.c \
+					  my_libft2.c \
 					  print_utilities.c \
 					  signal_handler.c \
 					  exit_perror.c \

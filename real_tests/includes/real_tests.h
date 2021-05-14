@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 16:16:44 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/14 14:52:55 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/14 16:24:31 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,20 @@ int		hidden_charactors(void);
 int		long_string(void);
 int		long_long_string(void);
 int		size_zero(void);
+
+/*
+** FT_STRNSTR_TEST
+*/
+
+int		ft_strnstr_launcher(void);
+int		basic_test01(void);
+int		basic_test02(void);
+int		basic_test03(void);
+int		null_charactor_needle(void);
+int		nonexistent_needle(void);
+int		half_word_needle(void);
+int		unreacheable_size(void);
+int		almost_reachable_size(void);
+int		size_zero_ft_strnstr(void);
 
 #endif

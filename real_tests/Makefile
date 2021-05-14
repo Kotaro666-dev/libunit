@@ -6,7 +6,7 @@
 #    By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/08 16:17:29 by kkamashi          #+#    #+#              #
-#    Updated: 2021/05/14 14:54:19 by kkamashi         ###   ########.fr        #
+#    Updated: 2021/05/14 16:23:58 by kkamashi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ SRCS_DIR			= srcs/
 OBJS_DIR			= objs/
 ATOI_DIR			= ft_atoi_test/
 STRNCMP_DIR			= ft_strncmp_test/
+STRNSTR_DIR			= ft_strnstr_test/
 LIBFT_DIR			= ../libft/
 LIBUNIT_DIR			= ../framework/
 
@@ -78,8 +79,20 @@ STRNCMP				= 00_launcher.c \
 					  07_long_long_string.c \
 					  08_size_zero.c
 
+STRNSTR				= 00_launcher.c \
+					  01_basic_test01.c \
+					  02_basic_test02.c \
+					  03_basic_test03.c \
+					  04_null_charactor_needle.c \
+					  05_nonexistent_needle.c \
+					  06_half_word_needle.c \
+					  07_unreachable_size.c \
+					  08_almost_reachable_size.c \
+					  09_size_zero_ft_strnstr.c
+
 SRCS				= $(addprefix $(ATOI_DIR), $(ATOI)) \
-					  $(addprefix $(STRNCMP_DIR), $(STRNCMP))
+					  $(addprefix $(STRNCMP_DIR), $(STRNCMP)) \
+					  $(addprefix $(STRNSTR_DIR), $(STRNSTR))
 
 
 ## Compiled Files ##
@@ -138,6 +151,7 @@ $(OBJS_DIR):
 					@mkdir -p $(OBJS_DIR)
 					@mkdir -p $(OBJS_DIR)$(ATOI_DIR)
 					@mkdir -p $(OBJS_DIR)$(STRNCMP_DIR)
+					@mkdir -p $(OBJS_DIR)$(STRNSTR_DIR)
 
 ## Phony ##
 .PHONY:				all clean fclean re test

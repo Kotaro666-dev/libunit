@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 20:34:21 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/11 12:23:21 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/14 14:42:20 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,8 @@ int strlen_launcher(void)
 	load_test(&testlist, "Only null character test", &many_spaces);
 	load_test(&testlist, "String with null character test",
 											 &string_with_null_character);
-	return (launch_tests(&testlist));
+	run_tests(&testlist);
+	display_results(&testlist);
+	append_report(&testlist);
+	return (validate_results(&testlist, ST_OK));
 }

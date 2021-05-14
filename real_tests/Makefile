@@ -6,7 +6,7 @@
 #    By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/08 16:17:29 by kkamashi          #+#    #+#              #
-#    Updated: 2021/05/14 14:37:12 by kkamashi         ###   ########.fr        #
+#    Updated: 2021/05/14 14:54:19 by kkamashi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,11 +70,13 @@ ATOI				= 00_launcher.c \
 
 STRNCMP				= 00_launcher.c \
 					  01_basic_test.c \
-					  02_nan_charactors_test.c \
+					  02_nan_charactors.c \
 					  03_same_charactors_in_beggining.c \
 					  04_bigger_size_than_charactors.c \
 					  05_hidden_charactors.c \
-					  06_long_string.c
+					  06_long_string.c \
+					  07_long_long_string.c \
+					  08_size_zero.c
 
 SRCS				= $(addprefix $(ATOI_DIR), $(ATOI)) \
 					  $(addprefix $(STRNCMP_DIR), $(STRNCMP))

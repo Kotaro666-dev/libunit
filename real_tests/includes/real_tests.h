@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 16:16:44 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/14 14:36:56 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/14 14:52:55 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,12 @@ int		solo_plus_test(void);
 
 int		ft_strncmp_launcher(void);
 int		basic_test(void);
-int		nan_charactors_test(void);
+int		nan_charactors(void);
 int		same_charactors_in_beggining(void);
 int		bigger_size_than_charactors(void);
 int		hidden_charactors(void);
 int		long_string(void);
+int		long_long_string(void);
+int		size_zero(void);
 
 #endif

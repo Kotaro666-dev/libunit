@@ -4,6 +4,7 @@ jobs:
     docker:
       - image: alexandregv/norminette:v3
     working_directory: ~/project/
+    steps:
       - checkout
       - run: norminette -R CheckForbiddenSourceHeader framework
       - run: norminette -R CheckForbiddenSourceHeader libft

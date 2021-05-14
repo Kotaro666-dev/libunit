@@ -6,18 +6,18 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 12:00:44 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/11 12:06:09 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/14 14:59:02 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-int many_spaces(void)
+int	many_spaces(void)
 {
-	char *str = " \t\n\v\f\r\n\v\f \t\t\v\v\v\r\n";
+	const char	*str = " \t\n\v\f\r\n\v\f \t\t\v\v\v\r\n";
 
 	if (ft_strlen(str) == strlen(str))
-		return(0);
+		return (0);
 	else
-		return(-1);
+		return (-1);
 }

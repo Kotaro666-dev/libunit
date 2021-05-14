@@ -6,13 +6,13 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 16:48:29 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/09 19:22:12 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/14 14:41:34 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 
-void			append_report(t_unit_test **testlist)
+void	append_report(t_unit_test **testlist)
 {
 	t_unit_test	*current;
 

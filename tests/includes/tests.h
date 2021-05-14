@@ -6,18 +6,18 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:57:12 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/12 15:08:48 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 14:52:09 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_H
-# define TEST_H
+#ifndef TESTS_H
+# define TESTS_H
 
 # include <unistd.h>
 # include <stdio.h>
 # include <string.h>
-# include "../../framework/includes/libunit.h"
-# include "../../libft/includes/libft.h"
+# include "libunit.h"
+# include "libft.h"
 
 /*
 ** OK_TEST

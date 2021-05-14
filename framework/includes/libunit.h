@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:23:27 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/14 13:34:58 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 14:41:13 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 
 # include <fcntl.h>
 
-typedef struct	s_unit_test
+typedef struct s_unit_test
 {
 	char				*name;
 	int					(*func)(void);

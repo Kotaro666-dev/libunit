@@ -6,16 +6,16 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 11:58:44 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/11 11:59:19 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/14 14:56:35 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-int empty_string(void)
+int	empty_string(void)
 {
 	if (ft_strlen("") == strlen(""))
-		return(0);
+		return (0);
 	else
-		return(-1);
+		return (-1);
 }

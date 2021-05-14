@@ -6,15 +6,15 @@
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 08:11:25 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/14 13:45:03 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 15:02:51 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-int segv_launcher(void)
+int	segv_launcher(void)
 {
-	t_unit_test *testlist;
+	t_unit_test	*testlist;
 
 	testlist = NULL;
 	printf("SEGV:\n");

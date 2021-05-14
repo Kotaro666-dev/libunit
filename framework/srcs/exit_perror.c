@@ -6,7 +6,7 @@
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 22:35:27 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/13 23:35:50 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 14:44:00 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 static char	*ft_strerror(void)
 {
-	char *str;
+	char	*str;
 
-	if (!(str = my_calloc(100, sizeof(char*))))
+	str = my_calloc(100, sizeof(char *));
+	if (!str)
 		my_strlcpy(str, "malloc failed", 100);
 	if (errno == EAGAIN)
 		my_strlcpy(str, "Try Again", 100);
@@ -47,7 +48,7 @@ static void	ft_perror(char *s)
 	my_putstr_fd(RESET, STDERR_FILENO);
 }
 
-void		exit_perror(char *str_msg, int exit_status)
+void	exit_perror(char *str_msg, int exit_status)
 {
 	ft_perror(str_msg);
 	exit(exit_status);

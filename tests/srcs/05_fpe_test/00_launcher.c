@@ -6,15 +6,15 @@
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 08:10:07 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/14 13:46:59 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 15:33:41 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-int fpe_launcher(void)
+int	fpe_launcher(void)
 {
-	t_unit_test *testlist;
+	t_unit_test	*testlist;
 
 	testlist = NULL;
 	printf("FPE:\n");

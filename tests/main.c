@@ -6,13 +6,13 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 08:43:16 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/14 14:27:04 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 14:50:12 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "tests.h"
+#include "tests.h"
 
-static void		print_header_fd(int fd)
+static void	print_header_fd(int fd)
 {
 	my_putendl_fd("*********************************", fd);
 	my_putendl_fd("******** 42 - Unit Tests ********", fd);
@@ -20,7 +20,7 @@ static void		print_header_fd(int fd)
 	my_putendl_fd("*********************************", fd);
 }
 
-static void		create_report()
+static void	create_report(void)
 {
 	g_fd = open(FILE_PATH, O_CREAT | O_WRONLY, S_IRWXU);
 	if (g_fd == -1)
@@ -30,9 +30,9 @@ static void		create_report()
 	print_header_fd(g_fd);
 }
 
-int				main(void)
+int	main(void)
 {
-	int status;
+	int	status;
 
 	status = 0;
 	print_header_fd(STDOUT_FILENO);

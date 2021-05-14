@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: gcc:4.9
-    # working_directory: ~/
+    working_directory: ~/project/
     steps:
       - checkout
       - run: pwd

@@ -6,4 +6,5 @@ jobs:
     working_directory: ~/libunit/real_tests/
     steps:
       - checkout
+      - run: pwd
       - run: make clean && make test

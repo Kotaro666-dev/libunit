@@ -6,7 +6,7 @@
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 08:09:15 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/11 08:09:51 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 13:46:25 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,8 @@ int abort_launcher(void)
 	printf("ABORT:\n");
 	my_putendl_fd("ABORT:", g_fd);
 	load_test(&testlist, "Abort test", &abort_test);
-	return (launch_tests(&testlist));
+	run_tests(&testlist);
+	display_results(&testlist);
+	append_report(&testlist);
+	return (validate_results(&testlist, ST_ABORT));
 }

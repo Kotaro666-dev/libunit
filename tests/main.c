@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 08:43:16 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/12 15:13:13 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 13:48:06 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,19 @@ static void		create_report()
 
 int				main(void)
 {
+	int status;
+
+	status = 0;
 	print_header_fd(STDOUT_FILENO);
 	create_report();
-	strlen_launcher();
-	ko_launcher();
-	segv_launcher();
-	buse_launcher();
-	abort_launcher();
-	fpe_launcher();
-	alarm_launcher();
+	status |= strlen_launcher();
+	status |= ko_launcher();
+	status |= segv_launcher();
+	status |= buse_launcher();
+	status |= abort_launcher();
+	status |= fpe_launcher();
+	status |= alarm_launcher();
 	close(g_fd);
-	return (0);
+	printf("Result: %d\n", status);
+	return (status);
 }

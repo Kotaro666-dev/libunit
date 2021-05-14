@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 16:04:42 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/14 16:42:06 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/14 17:09:38 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 int	basic_test03(void)
 {
-	if (ft_strnstr("lorem ipsum dolor sit ipsum dolor", "ipsum", 35) == \
-		strnstr("lorem ipsum dolor sit ipsum dolor", "ipsum", 35))
+	const char	*str1 = "lorem ipsum dolor sit ipsum dolor";
+	const char	*str2 = "lorem ipsum dolor sit ipsum dolor";
+
+	if (ft_strnstr(str1, "ipsum", 35) == strnstr(str2, "ipsum", 35))
 		return (0);
 	else
 		return (-1);

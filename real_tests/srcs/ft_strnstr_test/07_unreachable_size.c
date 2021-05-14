@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 16:11:17 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/14 16:42:27 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/14 17:09:56 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 int	unreacheable_size(void)
 {
-	if (ft_strnstr("lorem ipsum dolor sit amet", "sit", 10) == \
-		strnstr("lorem ipsum dolor sit amet", "sit", 10))
+	const char	*str1 = "lorem ipsum dolor sit amet";
+	const char	*str2 = "lorem ipsum dolor sit amet";
+
+	if (ft_strnstr(str1, "sit", 10) == strnstr(str2, "sit", 10))
 		return (0);
 	else
 		return (-1);

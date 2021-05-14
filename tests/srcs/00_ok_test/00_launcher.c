@@ -26,6 +26,9 @@ int	strlen_launcher(void)
 	load_test(&testlist, "Many spaces test", &many_spaces);
 	load_test(&testlist, "Only null character test", &many_spaces);
 	load_test(&testlist, "String with null character test",
-		&string_with_null_character);
-	return (launch_tests(&testlist));
+											 &string_with_null_character);
+	run_tests(&testlist);
+	display_results(&testlist);
+	append_report(&testlist);
+	return (validate_results(&testlist, ST_OK));
 }

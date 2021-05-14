@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 16:42:26 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/12 17:16:18 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 14:41:04 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,8 @@ int ft_atoi_launcher(void)
 	load_test(&testlist, "ft_atoi(\"\")", &empty_string_test);
 	load_test(&testlist, "ft_atoi(\"-\")", &solo_minus_test);
 	load_test(&testlist, "ft_atoi(\"+\")", &solo_plus_test);
-	return (launch_tests(&testlist));
+	run_tests(&testlist);
+	display_results(&testlist);
+	append_report(&testlist);
+	return (validate_results(&testlist, ST_OK));
 }

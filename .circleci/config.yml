@@ -18,3 +18,11 @@ jobs:
       - checkout
       - run: make clean -C tests && make test -C tests
       - run: make clean -C real_tests && make test -C real_tests
+workflows:
+    version: 2
+    norminette_and_test:
+      jobs:
+        - norminette
+        - test:
+          requires:
+            - norminette

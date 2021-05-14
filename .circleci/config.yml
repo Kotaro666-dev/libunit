@@ -6,6 +6,4 @@ jobs:
     working_directory: ~/project/
     steps:
       - checkout
-      - run: pwd
-      - run: ls -la
       - run: make clean -C real_tests && make test -C real_tests

@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 16:21:04 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/14 16:41:47 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 17:34:50 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	print_header_fd(int fd)
 {
 	my_putendl_fd("*********************************", fd);
 	my_putendl_fd("******** 42 - Unit Tests ********", fd);
-	my_putendl_fd("********      TESTS      ********", fd);
+	my_putendl_fd("********   REAL_TESTS    ********", fd);
 	my_putendl_fd("*********************************", fd);
 }
 

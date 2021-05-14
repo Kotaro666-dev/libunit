@@ -3,8 +3,9 @@ jobs:
   build:
     docker:
       - image: gcc:4.9
-    working_directory: ~/libunit/real_tests/
+    working_directory: ~/
     steps:
       - checkout
       - run: pwd
+      - run: ls -la
       - run: make clean && make test

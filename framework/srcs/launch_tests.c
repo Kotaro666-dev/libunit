@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:23:35 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/13 23:17:54 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 13:35:48 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static void	parent_proc(t_unit_test *test, int *status)
 		*status = -1;
 }
 
-static int	run_tests(t_unit_test **testlist)
+int	run_tests(t_unit_test **testlist)
 {
 	int			status;
 	t_unit_test	*current;
@@ -86,7 +86,7 @@ static int	run_tests(t_unit_test **testlist)
 	return (status);
 }
 
-int 		launch_tests(t_unit_test **testlist)
+int	launch_tests(t_unit_test **testlist)
 {
 	int status;
 

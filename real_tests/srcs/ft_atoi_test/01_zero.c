@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   01_zero.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 16:18:00 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/12 17:22:48 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 12:31:37 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	zero_test(void)
 {
-	if (ft_atoi("0") == atoi("0"))
+	if (ft_atoi("0") == atoi("1"))
 		return (0);
 	else
 		return (-1);

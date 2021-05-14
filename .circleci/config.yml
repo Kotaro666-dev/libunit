@@ -3,9 +3,9 @@ jobs:
   build:
     docker:
       - image: gcc:4.9
-    working_directory: ~/
+    # working_directory: ~/
     steps:
       - checkout
       - run: pwd
       - run: ls -la
-      - run: make clean && make test
+      - run: make clean -C real_tests && make test -C real_tests

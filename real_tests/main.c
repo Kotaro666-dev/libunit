@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 16:21:04 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/12 17:24:39 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 13:25:49 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int				main(void)
 	print_header_fd(STDOUT_FILENO);
 	create_report();
 	ft_atoi_launcher();
+	ft_strncmp_launcher();
 	close(g_fd);
 	return (0);
 }

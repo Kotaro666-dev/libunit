@@ -1,8 +1,8 @@
 version: 2.1
 jobs:
   build:
-    docker:
-      - image: gcc:4.9
+    macos:
+      xcode: 11.3.0
     working_directory: ~/project/
     steps:
       - checkout

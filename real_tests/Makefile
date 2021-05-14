@@ -6,7 +6,7 @@
 #    By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/08 16:17:29 by kkamashi          #+#    #+#              #
-#    Updated: 2021/05/12 17:38:17 by kefujiwa         ###   ########.fr        #
+#    Updated: 2021/05/14 14:37:12 by kkamashi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ HEADER_DIR			= includes/
 SRCS_DIR			= srcs/
 OBJS_DIR			= objs/
 ATOI_DIR			= ft_atoi_test/
+STRNCMP_DIR			= ft_strncmp_test/
 LIBFT_DIR			= ../libft/
 LIBUNIT_DIR			= ../framework/
 
@@ -67,7 +68,17 @@ ATOI				= 00_launcher.c \
 					  19_solo_minus.c \
 					  20_solo_plus.c
 
+STRNCMP				= 00_launcher.c \
+					  01_basic_test.c \
+					  02_nan_charactors_test.c \
+					  03_same_charactors_in_beggining.c \
+					  04_bigger_size_than_charactors.c \
+					  05_hidden_charactors.c \
+					  06_long_string.c
+
 SRCS				= $(addprefix $(ATOI_DIR), $(ATOI)) \
+					  $(addprefix $(STRNCMP_DIR), $(STRNCMP))
+
 
 ## Compiled Files ##
 OBJS				= $(SRCS:%.c=$(OBJS_DIR)%.o)
@@ -124,6 +135,7 @@ $(OBJS_DIR)%.o:		$(SRCS_DIR)%.c
 $(OBJS_DIR):
 					@mkdir -p $(OBJS_DIR)
 					@mkdir -p $(OBJS_DIR)$(ATOI_DIR)
+					@mkdir -p $(OBJS_DIR)$(STRNCMP_DIR)
 
 ## Phony ##
 .PHONY:				all clean fclean re test

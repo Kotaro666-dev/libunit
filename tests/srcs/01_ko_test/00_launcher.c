@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 08:07:05 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/14 15:00:18 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 23:19:30 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	ko_launcher(void)
 	t_unit_test	*testlist;
 
 	testlist = NULL;
-	my_putendl_fd("KO_TEST:", STDOUT_FILENO);
-	my_putendl_fd("KO_TEST:", g_fd);
+	print_test_fd("KO Tests", STDOUT_FILENO);
+	print_test_fd("KO Tests", g_fd);
 	load_test(&testlist, "STRLEN test", &strlen_test);
 	load_test(&testlist, "STRNCMP test", &strncmp_test);
 	load_test(&testlist, "STRCHR test", &strchr_test);

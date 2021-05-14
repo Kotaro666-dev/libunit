@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 08:07:05 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/11 13:52:43 by kkamashi         ###   ########.fr       */
+/*   Updated: 2021/05/14 13:44:36 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,8 @@ int ko_launcher(void)
 	load_test(&testlist, "STRNCMP test", &strncmp_test);
 	load_test(&testlist, "STRCHR test", &strchr_test);
 	load_test(&testlist, "STRRCHR test", &strrchr_test);
-	return (launch_tests(&testlist));
+	run_tests(&testlist);
+	display_results(&testlist);
+	append_report(&testlist);
+	return (validate_results(&testlist, ST_KO));
 }

@@ -6,7 +6,7 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 12:23:27 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/13 23:26:51 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/14 13:34:58 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ void	display_results(t_unit_test **testlist);
 void	clear_tests(t_unit_test **testlist);
 void	print_name_fd(char *name, int fd);
 void	print_result_fd(int result, int fd);
+int		validate_results(t_unit_test **testlist, int st);
+int		run_tests(t_unit_test **testlist);
 
 /*
 ** BONUS PART

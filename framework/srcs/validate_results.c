@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_launcher.c                                      :+:      :+:    :+:   */
+/*   validate_results.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kefujiwa <kefujiwa@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/11 08:10:34 by kefujiwa          #+#    #+#             */
-/*   Updated: 2021/05/14 13:54:14 by kefujiwa         ###   ########.fr       */
+/*   Created: 2021/05/14 13:36:51 by kefujiwa          #+#    #+#             */
+/*   Updated: 2021/05/14 13:38:40 by kefujiwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "tests.h"
+#include "libunit.h"
 
-int alarm_launcher(void)
+int validate_results(t_unit_test **testlist, int st)
 {
-	t_unit_test *testlist;
+	int			status;
+	t_unit_test	*current;
 
-	testlist = NULL;
-	printf("ALARM:\n");
-	my_putendl_fd("ALARM:", g_fd);
-	load_test(&testlist, "TIMEOUT test", &timeout_test);
-	run_tests(&testlist);
-	display_results(&testlist);
-	append_report(&testlist);
-	return (validate_results(&testlist, ST_ALARM));
+	status = SUCCESS;
+	current = *testlist;
+	while (current)
+	{
+		if (current->result != st)
+			status = FAILURE;
+		current = current->next;
+	}
+	clear_tests(testlist);
+	return (status);
 }

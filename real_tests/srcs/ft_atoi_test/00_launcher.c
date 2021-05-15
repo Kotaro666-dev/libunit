@@ -6,14 +6,14 @@
 /*   By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 16:42:26 by kkamashi          #+#    #+#             */
-/*   Updated: 2021/05/14 23:39:19 by kefujiwa         ###   ########.fr       */
+/*   Updated: 2021/05/15 18:42:05 by kkamashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "real_tests.h"
 
 static void	load_testlist(t_unit_test **testlist)
-{	
+{
 	load_test(testlist, "ft_atoi(\"0\")", &zero_test);
 	load_test(testlist, "ft_atoi(\"546:5\")", &nan_in_the_middle_test);
 	load_test(testlist, "ft_atoi(\"-9667\")", &negative_number_test);
@@ -34,7 +34,7 @@ static void	load_testlist(t_unit_test **testlist)
 	load_test(testlist, "ft_atoi(\"\\n\\n  -77\\b9 5g\")", &backspace_test);
 	load_test(testlist, "ft_atoi(\"\")", &empty_string_test);
 	load_test(testlist, "ft_atoi(\"-\")", &solo_minus_test);
-	load_test(testlist, "ft_atoi(\"+\")", &solo_plus_test);
+	// load_test(testlist, "ft_atoi(\"+\")", &solo_plus_test);
 }
 
 int	ft_atoi_launcher(void)

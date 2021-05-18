@@ -6,7 +6,7 @@
 #    By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/08 13:01:30 by kkamashi          #+#    #+#              #
-#    Updated: 2021/05/12 15:13:50 by kefujiwa         ###   ########.fr        #
+#    Updated: 2021/05/18 12:50:07 by kefujiwa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -126,7 +126,7 @@ re:					fclean all
 test:				all
 					@./$(NAME)
 
-$(NAME):			$(LIBFT_NAME) $(LIBUNIT_NAME) $(OBJS)
+$(NAME):			$(LIBFT_NAME) $(LIBUNIT_NAME) $(OBJS_DIR) $(OBJS)
 					@$(CC) $(CFLAGS) -I $(HEADER_DIR) -o $(NAME) main.c $(OBJS) $(LIBFT_NAME) $(LIBUNIT_NAME)
 					@echo "\n\n$(_GREEN)Library '$(NAME)' compiled.\n$(_RESET)"
 
@@ -135,8 +135,6 @@ $(LIBFT_NAME):
 
 $(LIBUNIT_NAME):
 					@$(MAKE) -C $(LIBUNIT_DIR)
-
-$(OBJS):			$(OBJS_DIR)
 
 $(OBJS_DIR)%.o:		$(SRCS_DIR)%.c
 					@printf "$(_YELLOW)Generating tests objects... %-33.33s\r$(_RESET)" $@

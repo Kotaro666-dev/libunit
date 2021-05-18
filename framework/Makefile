@@ -6,7 +6,7 @@
 #    By: kkamashi <kkamashi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/08 12:23:32 by kkamashi          #+#    #+#              #
-#    Updated: 2021/05/14 23:11:30 by kefujiwa         ###   ########.fr        #
+#    Updated: 2021/05/18 12:49:25 by kefujiwa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,11 +78,9 @@ fclean:
 
 re:					fclean all
 
-$(NAME):			$(OBJS)
+$(NAME):			$(OBJS_DIR) $(OBJS)
 					@$(AR) $(NAME) $(OBJS)
 					@echo "\n\n$(_GREEN)Library '$(NAME)' compiled.\n$(_RESET)"
-
-$(OBJS):			$(OBJS_DIR)
 
 $(OBJS_DIR)%.o:		$(SRCS_DIR)%.c
 					@printf "$(_YELLOW)Generating libunit objects... %-33.33s\r$(_RESET)" $@
